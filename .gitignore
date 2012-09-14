@@ -1,7 +1,6 @@
 .project
 .metadata
 .classpath
-
 bin/
 gen/
 tmp/**
@@ -9,3 +8,11 @@ tmp/**
 *.tmp
 *.bak
 *.swp
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Local configuration file (sdk path, etc)
+local.properties
