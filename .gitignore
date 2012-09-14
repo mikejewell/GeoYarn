@@ -1,6 +1,4 @@
-.project
 .metadata
-.classpath
 bin/
 gen/
 tmp/**
