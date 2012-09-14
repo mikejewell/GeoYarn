@@ -9,10 +9,21 @@
 <h1 class="test">Hello World</h1>
 
 <script type="text/javascript" charset="utf-8">
- $(document).ready(function() {
-   $(".test").html("Hi");
- });
-</script>
+$(document).ready(function() { 
+
+	function getLocation() {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			$(".test").html(position.coords.latitude+" "+position.coords.longitude);
+		}, function(error) {
+			$(".test").html("Wah: "+error.message);
+		}, {enableHighAccuracy:true});
+	}
+	
+	
+	
+    document.addEventListener("deviceready", getLocation, false);
+}); 
+ </script>
 
 </body>
 </html>
