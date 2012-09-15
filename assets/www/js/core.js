@@ -11,12 +11,15 @@
 
 	function getStoryList(callback) {
 		function onSuccess(fileSystem) {
-
-			fileSystem.root.getFile("stories", {create:true}, function() {
-				console.log("Woo");
+			fileSystem.root.getDirectory("stories", {create:true}, function(directory) {
+				var dirReader = directory.createReader();
+				dirReader.readEntries(function(list) {
+					callback(list);
+				}, function(error) {
+					console.log("Failed:");
+					console.log(error);
+				});
 			});
-		    console.log(fileSystem.name);
-		    console.log(fileSystem.root.name);
 		}
 
 		// request the persistent file system
@@ -26,6 +29,8 @@
 	function launch() {
 		$(".locate").click(function() {
 			getLocation();
-			getStoryList();
+			getStoryList(function(list) {
+				console.log(list);
+			});
 		});
 	}
