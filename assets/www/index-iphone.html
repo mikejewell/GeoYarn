@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Cordova</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" type="text/css" />
+	<script type="text/javascript" charset="utf-8" src="js/core.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/cordova-iphone.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.1.1.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>GeoYarn</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p class="test">Hello world</p>		
+		<button class="btn locate">Locate</button>
+	</div><!-- /content -->
+
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() { 
+    function setup() {
+		launch();
+	}
+    document.addEventListener("deviceready", setup, false);
+}); 
+
+ </script>
+
+</body>
+</html>
