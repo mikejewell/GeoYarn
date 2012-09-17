@@ -73,7 +73,7 @@
     self.viewController = [[[MainViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
-    self.viewController.startPage = @"index-iphone.html";
+    self.viewController.startPage = @"iphone/index.html";
     self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;
     

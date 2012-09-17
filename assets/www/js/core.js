@@ -26,6 +26,10 @@
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 	}
 
+	function showMap() {
+		$('#map_canvas').gmap({'center': '59.3426606750, 18.0736160278'});
+	}
+
 	function launch() {
 		$(".locate").click(function() {
 			getLocation();
